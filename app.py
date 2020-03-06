@@ -1,5 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template, request
 app = Flask(__name__)
-@app.route('/')
+@app.route('/',methods=["GET", "POST"])
 def hello():
-    return 'Hello world! from app import app as application'
+    if request.method == "GET":
+        return render_template("login.html")
+    user = request.form.get("username")
+    pwd = request.form.get("pwd")
+    return ('Hello world! Hello %s' % user)
