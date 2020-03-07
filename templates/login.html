@@ -1,15 +1,7 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Title</title>
-</head>
-<body>
-<form action="" method="post">
-    <input type="text" name="username">
-    <input type="password" name="pwd">
-    <input type="submit" value="提交">{{ error }}
-</form>
-</body>
-</html>
+﻿<!--引用父类-->
+{% extends 'basewl.html' %}
+
+<!--重载方法-->
+{% block content %}
+<input type="submit" value="提交 重载">
+{% endblock %}
