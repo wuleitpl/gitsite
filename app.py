@@ -5,4 +5,5 @@ def hello():
     if request.method == "GET":
         return render_template("login.html")
     user = request.form.get("username")
-    return ('Hello world! Hello %s !' % user)
+    return render_template("rgba.html")
+    #return ('Hello world! Hello %s !' % user)
